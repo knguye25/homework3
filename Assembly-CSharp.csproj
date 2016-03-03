@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\FollowScript.cs" />
+     <Compile Include="Assets\PlayAgain.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\PowerUpScript.cs" />
      <Compile Include="Assets\RedPowerUpScript.cs" />
+     <Compile Include="Assets\finishFlagScript.cs" />
      <Compile Include="Assets\greenWallScript.cs" />
      <Compile Include="Assets\redWallScript.cs" />
  <Reference Include="UnityEngine.Networking">
