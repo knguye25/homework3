@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FollowScript : MonoBehaviour {
 
@@ -22,4 +23,5 @@ public class FollowScript : MonoBehaviour {
 		//updating each last position
 		lastPlayerPos = thePlayer.transform.position;
 	}
+		
 }

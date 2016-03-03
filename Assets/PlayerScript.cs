@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
 	/* Public variables*/
 	public float speed;
-	public bool isGrounded, facingRight;
+	public bool isGrounded, facingRight, isDead;
 	public LayerMask groundLayer, deathLayer;
 
 	/* Private variables*/
@@ -19,6 +20,7 @@ public class PlayerScript : MonoBehaviour {
 		playerCollider = GetComponent<Collider2D> ();
 		playerAnimator = GetComponent<Animator> ();
 		facingRight = true;
+		isDead = false;
 		isGrounded = true;
 	}
 	
@@ -39,8 +41,11 @@ public class PlayerScript : MonoBehaviour {
 			playerBody.velocity = new Vector2 (playerBody.velocity.x, speed);
 		playerAnimator.SetBool ("isGrounded", isGrounded);
 
-		if (Physics2D.IsTouchingLayers (playerCollider, deathLayer))
+		if (Physics2D.IsTouchingLayers (playerCollider, deathLayer)) {
 			Debug.Log ("you died");
+			isDead = true;
+			SceneManager.LoadScene ("LoseScene");
+		}
 		
 	}
 

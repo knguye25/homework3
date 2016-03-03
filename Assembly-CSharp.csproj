@@ -50,9 +50,11 @@
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\PowerUpScript.cs" />
      <Compile Include="Assets\RedPowerUpScript.cs" />
+     <Compile Include="Assets\TimerScript.cs" />
      <Compile Include="Assets\finishFlagScript.cs" />
      <Compile Include="Assets\greenWallScript.cs" />
      <Compile Include="Assets\redWallScript.cs" />
+     <Compile Include="Assets\textTimer.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Volumes/Segate500/Unity/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
