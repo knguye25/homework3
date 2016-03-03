@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update(){
 		isGrounded = Physics2D.IsTouchingLayers (playerCollider, groundLayer);
+
 		if (Input.GetKey (KeyCode.Space) && isGrounded)
 			playerBody.velocity = new Vector2 (playerBody.velocity.x, speed);
 		playerAnimator.SetBool ("isGrounded", isGrounded);
@@ -56,4 +57,5 @@ public class PlayerScript : MonoBehaviour {
 			transform.localScale = theFlipScale;
 		}
 	}
+		
 }
