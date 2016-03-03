@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor.SceneManagement;
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
@@ -6,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
 	/* Public variables*/
 	public float speed;
 	public bool isGrounded, facingRight;
-	public LayerMask groundLayer;
+	public LayerMask groundLayer, deathLayer;
 
 	/* Private variables*/
 	private Rigidbody2D playerBody;
@@ -36,12 +37,15 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKey (KeyCode.Space) && isGrounded)
 			playerBody.velocity = new Vector2 (playerBody.velocity.x, speed);
 		playerAnimator.SetBool ("isGrounded", isGrounded);
+
+		if (Physics2D.IsTouchingLayers (playerCollider, deathLayer))
+			Debug.Log ("you died");
+		
 	}
 
 	private void Movement(float horizontal, float speedVelocity){
 		playerBody.velocity = new Vector2 (horizontal * speedVelocity, playerBody.velocity.y);
 		playerAnimator.SetFloat ("Speed", Mathf.Abs (horizontal * speedVelocity));
-		Debug.Log ("speed = " + (horizontal * speed));
 	}
 
 	private void Flip(float horizontal){
