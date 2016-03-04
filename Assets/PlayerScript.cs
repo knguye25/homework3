@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+/*Programmer: Khanh Nguyen*/
+using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -23,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
 		isDead = false;
 		isGrounded = true;
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		float horizontal = Input.GetAxis ("Horizontal");
@@ -46,7 +47,7 @@ public class PlayerScript : MonoBehaviour {
 			isDead = true;
 			SceneManager.LoadScene ("LoseScene");
 		}
-		
+
 	}
 
 	private void Movement(float horizontal, float speedVelocity){
@@ -62,5 +63,5 @@ public class PlayerScript : MonoBehaviour {
 			transform.localScale = theFlipScale;
 		}
 	}
-		
+
 }

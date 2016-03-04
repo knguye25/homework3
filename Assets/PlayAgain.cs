@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+/*Programmer: Khanh Nguyen*/
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 

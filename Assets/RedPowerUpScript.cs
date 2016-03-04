@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+/*Programmer: Khanh Nguyen*/
+using UnityEngine;
 using System.Collections;
 
 public class RedPowerUpScript : MonoBehaviour {

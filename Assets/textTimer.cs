@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+/*Programmer: Khanh Nguyen*/
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+/* for starting timer and displaying it*/
 public class textTimer : MonoBehaviour {
 
 	public float timeLim;
@@ -12,7 +14,7 @@ public class textTimer : MonoBehaviour {
 		timeLim = 20f;
 		myText = GetComponent<Text> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (timeLim > 1) {

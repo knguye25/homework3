@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+/*Programmer: Khanh Nguyen*/
+using UnityEngine;
 using System.Collections;
 
+/*script for when player collide against red wall/platform*/
 public class redWallScript : MonoBehaviour {
 
 	private PlayerScript ps;
